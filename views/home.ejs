@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhagavath geetha</title>
+    <link rel="stylesheet" href="/home.css">
+</head>
+<body>
+    <div class="title">
+        <h1>BhagavathGeetha</h1>
+        <p>The Song Of God</p>
+        <form name="language" method="get" action="\geeta\language">
+            <select name="language" id="languageselection">
+                <option value="<%= data.language %>"><%= data.language %></option>
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Telugu">Telugu</option>
+                <option value="Kannada">Kannada</option>
+                <option value="Tamil">Tamil</option>
+                <option value="Malayalam">Malayalam</option>
+                <option value="Gujarathi">Gujarathi</option>
+                <option value="Bengali">Bengali</option>
+            </select>
+            <button  >Translate</button>
+        </form>
+    </div>
+    <div class="container">
+        <div class="sidebox">
+            <div class="slokaimg">
+                <img src="https://www.holy-bhagavad-gita.org/public/images/bg/2.jpg" alt="image">
+            </div>
+           <!-- <div class="slokabtns">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>10</button> -->
+        </div>
+        <div class="mainbox">
+            <div class="selection">
+                <form name="chapter" method="get" action="/geeta/<%=data.language %>/chapter">
+                    <select name="chapter" id="chapterselector">
+                        <!-- <option value="1">chapter 1</option> -->
+                        <option value="2">chapter 2</option>
+                        <!-- <option value="3">chapter 3</option>
+                        <option value="4">chapter 4</option>
+                        <option value="5">chapter 5</option>
+                        <option value="6">chapter 6</option>
+                        <option value="7">chapter 7</option>
+                        <option value="8">chapter 8</option> -->
+
+                    </select>
+                    <!-- <button  >Translate</button> -->
+                
+    
+                <!-- <form name="sloka" method="get"> -->
+                    <select name="sloka" id="slokaselection">
+                        <option value="33">sloka <%=data.verse %></option>
+                        <option value="34">sloka 44</option>
+                        <option value="35">sloka 35</option>
+                        <option value="36">sloka 36</option>
+                        <option value="37">sloka 37</option>
+                        <option value="38">sloka 38</option>
+                        <!-- <option value="39">sloka 39</option>
+                        <option value="40">sloka 40</option> -->
+                    </select>
+                    <button  >Translate</button>
+                </form>
+            </div>
+            
+            <div class="slokabox">
+                 <div class="line"><%=data.line1 %></div>
+                 <div class="line"><%=data.line2 %></div>
+                 <div class="line"><%=data.line3 %></div>
+            </div>
+    
+            <div class="slokaaudio">
+                <input type="range">
+            </div>
+    
+            <div class="slokasummary">
+                 <%=data.meaning %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
